@@ -49,7 +49,6 @@ export const register = async ({
 export const login = async ({ email, password }: LoginProps) => {
   try {
     const res = await api.post("user/login", { email, password });
-    // console.log(res)
     if (res.data.message === "User registed") {
       res.data.condition == 200;
       return res.data.data;
@@ -67,7 +66,6 @@ export const login = async ({ email, password }: LoginProps) => {
         return data;
       }
     } else {
-      //console.error("Unexpected error:", error)
       return JSON.stringify({
         condition: "Unexpected error",
       });

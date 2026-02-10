@@ -1,8 +1,7 @@
-// src/admin/AdminEditPost.tsx
 import React, { useState, useEffect } from "react";
 import { genres } from "../data/data";
 import { getPostID, updatePost } from "../services/post";
-import upload from "../services/Upload"; // Cloudinary upload service
+import upload from "../services/Upload"; 
 import { useParams, useNavigate } from "react-router-dom";
 
 interface Post {
@@ -64,7 +63,7 @@ export const AdminEditPost: React.FC = () => {
     try {
       const formData = new FormData();
       formData.append("file", file);
-      formData.append("upload_preset", "News HUB"); // your Cloudinary preset
+      formData.append("upload_preset", "News HUB"); 
       const res = await upload(formData);
       const updated = [...form.image];
       updated[i] = res.data.secure_url;
@@ -89,7 +88,6 @@ export const AdminEditPost: React.FC = () => {
         onSubmit={onSubmit}
         className="bg-white rounded-xl shadow-lg p-6 space-y-4"
       >
-        {/* Title */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">
             Title
@@ -102,7 +100,6 @@ export const AdminEditPost: React.FC = () => {
           />
         </div>
 
-        {/* Dynamic content blocks */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-2">
             Content Blocks
@@ -211,7 +208,6 @@ export const AdminEditPost: React.FC = () => {
           </div>
         </div>
 
-        {/* Genre & Date */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-1">

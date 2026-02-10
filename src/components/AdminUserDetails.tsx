@@ -25,24 +25,11 @@ export const AdminUserDetails = ( user: UserData) => {
           <h4 className="font-semibold text-sm text-black">{`${user.firstname} ${user.lastname}`}</h4>
           <p className="text-xs text-gray-500">{user.email}</p>
           <p className="text-xs text-gray-400">User</p>
-          {/* <p className="text-xs text-gray-400">
-            Joined: {new Date(user.createdAt).toLocaleDateString()}
-          </p> */}
+          
         </div>
       </div>
       <div className="flex gap-2">
-        {/* <button
-          onClick={() => onEdit(user._id)}
-          className="px-3 py-1 bg-indigo-600 text-white rounded-lg text-sm hover:bg-indigo-700"
-        >
-          Edit
-        </button>
-        <button
-          onClick={() => onDelete(user._id)}
-          className="px-3 py-1 bg-rose-600 text-white rounded-lg text-sm hover:bg-rose-700"
-        >
-          Delete
-        </button> */}
+        
       </div>
     </div>
   );

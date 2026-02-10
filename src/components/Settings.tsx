@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export const AdminSettings: React.FC = () => {
-  // Profile/account settings
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [profilePic, setProfilePic] = useState<File | null>(null);
@@ -18,7 +17,6 @@ export const AdminSettings: React.FC = () => {
     <div>
       <h1 className="text-3xl font-bold text-indigo-900 mb-6">Settings</h1>
       <div className="bg-white rounded-xl shadow-lg p-6 space-y-6">
-        {/* Username */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">
             Username
@@ -31,7 +29,6 @@ export const AdminSettings: React.FC = () => {
           />
         </div>
 
-        {/* Password */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">
             Password
@@ -44,7 +41,6 @@ export const AdminSettings: React.FC = () => {
           />
         </div>
 
-        {/* Profile picture */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">
             Profile Picture
@@ -62,7 +58,6 @@ export const AdminSettings: React.FC = () => {
           )}
         </div>
 
-        {/* About/Bio */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">
             About
@@ -75,7 +70,6 @@ export const AdminSettings: React.FC = () => {
           />
         </div>
 
-        {/* Contact Email */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">
             Contact Email
@@ -88,7 +82,6 @@ export const AdminSettings: React.FC = () => {
           />
         </div>
 
-        {/* Save button */}
         <div className="flex flex-col w-50 gap-2.5">
           <button className="px-6 py-3 bg-linear-to-r from-indigo-600 to-purple-600 text-white rounded-lg hover:shadow-lg font-semibold">
             Save Settings

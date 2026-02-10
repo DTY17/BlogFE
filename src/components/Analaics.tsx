@@ -1,9 +1,7 @@
-// src/admin/AdminAnalytics.tsx
 import React, { useEffect, useState } from "react";
 import { samplePosts } from "../data/data";
 import { getPostCount, getViewCount } from "../services/post";
 
-// const numberFormat = (n: number) => n.toLocaleString();
 
 export const AdminAnalytics: React.FC = () => {
   const totalPosts = samplePosts.length;

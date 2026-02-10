@@ -33,9 +33,7 @@ const Router = () => {
 
   const navigation = useNavigate();
 
-  // Redux theme mode: "light" | "dark"
   const mode = useSelector((state: any) => state.theme?.mode);
-  // const mode = "dark"
   
 
   useEffect(() => {

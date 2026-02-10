@@ -15,15 +15,6 @@ export const ManageUsers: React.FC = () => {
     getUsers()
   },[])
 
-  // const handleEdit = (id: string) => {
-  //   console.log("Edit user:", id);
-  //   // navigate(`/admin/users/${id}`);
-  // };
-
-  // const handleDelete = (id: string) => {
-  //   console.log("Delete user:", id);
-  //   setUsers(users.filter((u) => u._id !== id));
-  // };
 
   return (
     <div>
@@ -35,7 +26,6 @@ export const ManageUsers: React.FC = () => {
           <ul className="space-y-4">
             {users.map((user : UserData) => (
               <li key={user._id}>
-                {/* Pass user data as props directly, not as an object */}
                 <AdminUserDetails
                   _id={user._id}
                   firstname={user.firstname}

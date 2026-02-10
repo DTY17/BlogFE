@@ -1,7 +1,5 @@
 import axios from "axios"
 
-
-// create auth
 const api = axios.create({
   baseURL: "https://abcbe.vercel.app/api/abc/"
 })

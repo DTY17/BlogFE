@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { deletePost, getPost } from "../services/post";
 import { useNavigate } from "react-router-dom";
 
-// Example: replace with your actual API call
 const samplePosts = [
   {
     _id: "1",
@@ -52,8 +51,7 @@ export const AdminManage: React.FC = () => {
   }, []);
 
   const handleDelete = (id: string) => {
-    // TODO: replace with API call
-    // setPosts(posts.filter((p) => p._id !== id));
+
     deletePost(id,localStorage.getItem("admin_token")as string);
     console.log("Delete");
   };
@@ -61,7 +59,6 @@ export const AdminManage: React.FC = () => {
   const handleEdit = (id: string) => {
     console.log("Responses : ", filteredPosts);
     navigate(`/admin/manage/${id}`);
-    //alert(`Edit post ${id}`);
   };
 
   return (
